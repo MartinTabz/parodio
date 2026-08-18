@@ -56,11 +56,12 @@ Cross-platform release builds later via GitHub Actions (macOS + Windows runners)
 - Dev: `pnpm dev`
 - Dev with renderer inspection: `pnpm dev:debug` (adds `--remote-debugging-port=9222`)
 - Type-check: `pnpm typecheck`
-- Lint: `pnpm exec eslint . --fix`
-- Build installers: `pnpm build`
-
-**Tests are not installed yet.** Vitest (unit) and Playwright (E2E, `_electron.launch()`) are planned,
-not reality — they are not in `package.json`. Ask before referencing them or writing a test.
+- Lint: `pnpm lint`
+- Format: `pnpm format`
+- Compile: `pnpm build` (typecheck + electron-vite build → `out/`)
+- Package installers: `pnpm build:mac` / `build:win` / `build:linux`
+- Unit tests: `pnpm test`
+- E2E tests: `pnpm test:e2e` (requires `pnpm build` first)
 
 ## ⚠️ Non-negotiable Electron security rules
 
