@@ -1,0 +1,21 @@
+node_modules
+dist
+out
+.DS_Store
+.eslintcache
+*.log*
+
+# Electron build output
+build/*.dmg
+build/*.exe
+build/*.AppImage
+build/*.zip
+
+# Editor/OS
+*.DS_Store
+
+# Test/sample video files — nikdy necommitovat copyrightovaný obsah
+*.mp4
+*.mov
+*.mkv
+*.avi
