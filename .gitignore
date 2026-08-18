@@ -4,7 +4,9 @@ out
 .DS_Store
 .eslintcache
 *.log*
-.playwright-mcp
+.playwright-mcp/
+test-results/
+playwright-report/
 
 # Electron build output
 build/*.dmg
@@ -20,6 +22,3 @@ build/*.zip
 *.mov
 *.mkv
 *.avi
-.playwright-mcp/
-.playwright-mcp/
-.playwright-mcp
