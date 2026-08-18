@@ -4,7 +4,13 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   main: {},
-  preload: {},
+  preload: {
+    // Sandboxed preload nedokáže resolvovat bare npm moduly přes `require` —
+    // deps musí být zabundlované do jednoho souboru.
+    build: {
+      externalizeDeps: false
+    }
+  },
   renderer: {
     resolve: {
       alias: {

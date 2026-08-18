@@ -1,13 +1,14 @@
 import { useState } from 'react'
 
 function Versions(): React.JSX.Element {
-  const [versions] = useState(window.electron.process.versions)
+  // Když selže preload, `window.electron` neexistuje — nesmí to shodit celý strom.
+  const [versions] = useState(window.electron?.process.versions)
 
   return (
     <ul className="versions">
-      <li className="electron-version">Electron v{versions.electron}</li>
-      <li className="chrome-version">Chromium v{versions.chrome}</li>
-      <li className="node-version">Node v{versions.node}</li>
+      <li className="electron-version">Electron v{versions?.electron ?? '—'}</li>
+      <li className="chrome-version">Chromium v{versions?.chrome ?? '—'}</li>
+      <li className="node-version">Node v{versions?.node ?? '—'}</li>
     </ul>
   )
 }

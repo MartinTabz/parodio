@@ -1,7 +1,7 @@
 {
-  "name": "parodio-scaffold",
+  "name": "parodio",
   "version": "1.0.0",
-  "description": "An Electron application with React and TypeScript",
+  "description": "Desktopová appka na dabing vlastních video klipů vlastním hlasem — nahraj video, ztlum originál, namluv scénu a exportuj. Inspirováno The Choicer Voicer. Nástroj, žádný obsah — uživatel nahrává jen svoje soubory.",
   "main": "./out/main/index.js",
   "author": "example.com",
   "homepage": "https://electron-vite.org",
@@ -18,7 +18,8 @@
     "build:unpack": "npm run build && electron-builder --dir",
     "build:win": "npm run build && electron-builder --win",
     "build:mac": "electron-vite build && electron-builder --mac",
-    "build:linux": "electron-vite build && electron-builder --linux"
+    "build:linux": "electron-vite build && electron-builder --linux",
+    "dev:debug": "electron-vite dev -- --remote-debugging-port=9222"
   },
   "dependencies": {
     "@electron-toolkit/preload": "^3.0.2",
