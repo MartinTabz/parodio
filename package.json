@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Desktopová appka na dabing vlastních video klipů vlastním hlasem — nahraj video, ztlum originál, namluv scénu a exportuj. Inspirováno The Choicer Voicer. Nástroj, žádný obsah — uživatel nahrává jen svoje soubory.",
   "main": "./out/main/index.js",
-  "author": "example.com",
-  "homepage": "https://electron-vite.org",
+  "author": "Martin Šíl",
+  "homepage": "https://parodio.cz",
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint --cache .",
